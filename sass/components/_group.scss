@@ -1,0 +1,122 @@
+@use '../abstracts/mixins' as *;
+
+.is-style-group-horizontal-scroll,
+.is-style-group-horizontal-scroll-btns {
+    padding-right: var(--wp--custom--layout--block-gap);
+    gap: var(--wp--preset--spacing--10);
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-inline: contain;
+    scroll-behavior: smooth;
+    scroll-snap-type: x proximity;
+    scrollbar-width: 0;
+    will-change: transform;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &.active {
+        cursor: grabbing;
+        cursor: -webkit-grabbing;
+        user-select: none;
+    }
+
+    &>.wp-block-group,
+    &>.wc-block-product,
+    &>.wp-block-gallery,
+    &>[class*="wp-block-"] {
+        flex: 0 0 auto !important;
+        width: 296px !important;
+        margin-block-start: 0;
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+
+        @media ($below-mobile-xs) {
+            max-width: 272px !important;
+        }
+    }
+
+    &.alignfull {
+        padding-left: calc(var(--wp--style--root--padding-left) + 4dvw);
+
+        @media (max-width: 1342px) {
+            padding-left: var(--wp--style--root--padding-left);
+        }
+
+        @media (min-width: 1600px) {
+            padding-left: calc(var(--wp--style--root--padding-left) + 15%);
+        }
+    }
+}
+
+/* Barra de progreso + botones */
+.scrolling-footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    width: 100%;
+    gap: 2rem;
+    max-width: var(--wp--style--global--content-size);
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    .scroll-bar {
+        flex: 1;
+        height: 6px;
+        background: #dfeaea;
+        border-radius: 4px;
+        overflow: hidden;
+        max-width: 90%;
+        /* No ocupa todo el ancho */
+    }
+
+    .scroll-progress {
+        height: 100%;
+        width: 10%;
+        background: #a7cfd1;
+        border-radius: 4px;
+        transition: width 0.3s ease;
+    }
+
+    &.scrolling-footer-container--hidden {
+
+        @media ($above-laptop) {
+            display: none;
+        }
+    }
+}
+
+
+.wp-block-group.is-layout-grid {
+    @media ($below-mobile) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.wp-block-group.is-position-sticky {
+    //top: calc(var(--wp--custom--layout--block-gap) + var(--wp-admin--admin-bar--position-offset, 0px))
+    top: 0;
+}
+
+
+.wp-block-group.is-style-margin-vertical {
+    padding-top: var(--wp--preset--spacing--80);
+    padding-bottom: var(--wp--preset--spacing--80);
+
+    @media ($below-mobile) {
+        padding-top: var(--wp--custom--layout--block-gap);
+        padding-bottom: var(--wp--custom--layout--block-gap);
+    }
+}
+
+
+
+
+//////
+/// 
+/// 

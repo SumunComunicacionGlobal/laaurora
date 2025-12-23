@@ -1,0 +1,52 @@
+@use '../abstracts/mixins' as *;
+
+#services-nav-sticky {
+  transition: padding-top 0.5s ease-in-out;
+
+    @media ($below-tablet) {
+        position:  relative !important;
+    }
+
+    &.is-stuck {
+        padding-top: 7rem !important; 
+    }
+
+    .wp-block-buttons.btns-filter {
+
+        @media ($below-tablet) {
+            opacity: 0;
+            max-height: 0;
+            transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+
+            &.filter-active {
+                opacity: 1;
+                max-height: 100vh;
+                transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+            }
+        }
+
+        .wp-block-button.is-style-outline-with-arrow {
+
+            a.wp-block-button__link::after {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+}
+
+
+
+#parent-title-Instituciones {
+    background-color: var(--wp--preset--color--primary-30) !important;
+    color: var(--wp--preset--color--foreground) !important;
+}
+
+#parent-title-Comunidades {
+    background-color: var(--wp--preset--color--secondary) !important;
+}
+
+#parent-title-Particulares {
+    background-color: var(--wp--preset--color--accent) !important;
+    color: var(--wp--preset--color--foreground) !important;
+}

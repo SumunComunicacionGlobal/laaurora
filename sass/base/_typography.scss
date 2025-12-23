@@ -1,0 +1,34 @@
+.wp-block-post-title a {
+    text-decoration: none;
+}
+
+a[href^="tel:"],
+a[href^="mailto:"] {
+    position: relative;
+	text-decoration: none;
+        &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 0;
+        height: 1px;
+        background: currentColor;
+        transition: width 0.3s ease;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+}
+
+[class*="has-heading-"][class*="-font-size"] {
+    line-height: var(--wp--custom--line-height--headings);
+    font-family: var(--wp--preset--font-family--font-heading);
+    font-weight: 500;
+}
+
+.has-display-font-size{
+    font-weight: 300;
+    line-height: var(--wp--custom--line-height--tiny);
+}

@@ -1,0 +1,15 @@
+@use '../abstracts/mixins' as *;
+
+.wpcf7-acceptance .wpcf7-list-item {
+	margin: 0;
+}
+
+.form-visita-previa {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: var(--wp--custom--layout--block-gap);
+
+	@media ($below-tablet) {
+		grid-template-columns: 1fr;
+	}
+}

@@ -1,0 +1,26 @@
+@use '../abstracts/mixins' as *;
+
+.home #hero {
+    position: relative;
+}
+
+#hero {
+    .wp-block-cover {
+        @media ($below-mobile) {
+            min-height: 760px !important;
+
+            .single-servicio-limpieza & {
+                min-height: 780px !important;
+            }
+
+            .blog &, .single-post & {
+                min-height: 680px !important;
+                padding-top: 6rem;
+            }
+
+            .archive.category &, .archive.author & {
+                min-height: 480px !important;
+            }
+        }
+    }
+}

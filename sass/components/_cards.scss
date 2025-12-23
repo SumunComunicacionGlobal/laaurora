@@ -1,0 +1,91 @@
+.card-arrow {
+
+    .card-arrow--content-icon {
+        z-index: 2;
+        position: relative;
+    }
+
+    svg {
+        transition: transform .3s ease-in-out;
+    }
+
+    img {
+        transition: filter .2s ease-in-out;
+    }
+
+    &:hover {
+        svg {
+            transform: rotate(-90deg);
+        }
+
+        figure.wp-block-image {
+            img {
+                filter: brightness(50%);
+            }
+        }
+
+        .wp-block-cover span.wp-block-cover__background {
+            opacity: 0.5;
+        }
+    }
+
+}
+
+
+
+.card-service {
+    height: 400px;
+
+    .wp-block-cover__inner-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+        flex: 1;
+    }
+    
+    img {
+        transition: .5s ease-in-out;
+    }
+
+    .card-service--tag {
+        position: absolute;
+        top:0rem;
+        right:0rem;
+        z-index: 1;
+    }
+
+    .card-service--content {
+        width: 100%;
+    }
+
+    .wp-block-post-excerpt {
+        opacity: 0;
+        max-height: 0;
+
+        transition: opacity .3s ease-in-out, max-height .3s ease-in-out;
+    }
+
+    &:hover {
+        img {
+            transform: scale(1.05);
+            transition: .5s ease-in-out;
+        }
+        .wp-block-post-excerpt {
+            opacity: 1;
+            max-height: 20vh;
+            transition: opacity .3s ease-in-out, max-height .3s ease-in-out;
+        }
+    }
+    a {
+        text-decoration: none;
+    }
+}
+
+.card-box {
+    background: rgba(231, 241, 244, 0.30);
+    backdrop-filter: blur(2px);
+}
+
+
+
