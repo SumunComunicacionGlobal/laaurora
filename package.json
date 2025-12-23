@@ -4,7 +4,7 @@
   "description": "Theme WP La Aurora",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SumunComunicacionGlobal/la-aurora.git"
+    "url": "https://github.com/SumunComunicacionGlobal/laaurora.git"
   },
   "keywords": [
     "sass",
@@ -14,9 +14,9 @@
   "author": "Alvaro Rubioc",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SumunComunicacionGlobal/la-aurora/issues"
+    "url": "https://github.com/SumunComunicacionGlobal/laaurora/issues"
   },
-  "homepage": "https://github.com/SumunComunicacionGlobal/la-aurora#readme",
+  "homepage": "https://github.com/SumunComunicacionGlobal/laaurora#readme",
   "devDependencies": {
     "@wordpress/stylelint-config": "^23.1.0",
     "dir-archiver": "^2.1.0",
