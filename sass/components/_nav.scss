@@ -59,6 +59,7 @@
 
   .wp-block-navigation__responsive-container.is-menu-open {
     height: 100dvh;
+
   }
 }
 
@@ -67,3 +68,14 @@
     display: block;
   }
 }
+
+@media ($below-tablet) {
+.wp-block-navigation__submenu-container { 
+      padding: 0 !important;
+
+      >.wp-block-navigation-item >.wp-block-navigation-item__content {
+        //padding: 0 !important;
+        font-size: 1.5rem !important;
+      }
+    } 
+  }

@@ -8,9 +8,10 @@
     .wp-block-cover {
         @media ($below-mobile) {
             min-height: 760px !important;
+            padding-top: var(--wp--preset--spacing--80);
 
             .single-servicio-limpieza & {
-                min-height: 780px !important;
+                min-height: 580px !important;
             }
 
             .blog &, .single-post & {
@@ -21,6 +22,15 @@
             .archive.category &, .archive.author & {
                 min-height: 480px !important;
             }
+
+            .wp-block-post-excerpt.has-subtitle-font-size {
+                font-size: var(--wp--preset--font-size--body) !important;
+            }
+
+            &.is-position-bottom-center {
+                align-items: center;
+            }
+            
         }
     }
 }
